@@ -1,0 +1,8 @@
+2024-05-14 19:27:39,217.v2_emit_message.INFO ==================================================
+2024-05-14 19:27:39,217.v2_emit_message.INFO Today is 2024-05-14 at 07:27 PM
+2024-05-14 19:27:39,217.v2_emit_message.INFO Running on: nt Windows 10
+2024-05-14 19:27:39,217.v2_emit_message.INFO Python version:  3.11.5
+2024-05-14 19:27:39,218.v2_emit_message.INFO Python path: C:\Users\topaz\anaconda3
+2024-05-14 19:27:39,218.v2_emit_message.INFO Working dir: C:\Users\topaz\Documents\streaming-data\streaming-03-rabbitmq
+2024-05-14 19:27:39,218.v2_emit_message.INFO ==================================================
+2024-05-14 19:27:39,229.v2_emit_message.INFO  [x] Sent Hello World!

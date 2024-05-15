@@ -1,4 +1,7 @@
 """
+    Name: Topaz Montague
+    Date: 5/15/2024
+
     This program sends a message to a queue on the RabbitMQ server.
 
 """

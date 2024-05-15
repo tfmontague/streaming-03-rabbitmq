@@ -1,16 +1,9 @@
 # streaming-03-rabbitmq
+Student Name: Topaz Montague
+Date: 5/15/2024
+Project Repository: [Decoupling with a Message Broker](https://github.com/tfmontague/streaming-03-rabbitmq)
 
 > Get started with RabbitMQ, a message broker, that enables multiple processes to communicate reliably through an intermediary.
-
-This project requires some free code - beyond that available in the Python Standard Library. To avoid messing up our local default Python installation, and any other Python projects we may have, we  create a local virtual environment to install and use these libraries.
-
-Think of a virtual environment as a safe sandbox. 
-We can install whatever we want in our sandbox, and it won't break other Python projects that may require different versions, etc. 
-
-We use the built-in Python utility `venv` to create our virtual environment. 
-There are other options, but this is simplest and most common. 
-We create the environment as a subfolder of this repo named .venv to keep it away from our project code. 
-
 
 ## Prerequisites
 
@@ -22,8 +15,11 @@ We create the environment as a subfolder of this repo named .venv to keep it awa
 
 ## Before You Begin
 
-1. Fork this starter repo into your GitHub account.
-1. Clone your repo down to your machine.
+1. Fork this starter repo into your GitHub account: https://github.com/denisecase/streaming-03-rabbitmq
+1. Clone your repo down to your machine. 
+````python
+git clone https://github.com/tfmontague/streaming-03-rabbitmq
+````
 1. Explore your new project repo in VS Code on your local machine.
 
 ## Task 1. Create a Python Virtual Environment
@@ -40,14 +36,18 @@ python -m venv .venv
 Verify you get a new .venv directory in your project. 
 We use .venv as the name to keep it away from our project files. 
 
+![.venv directory verification](image.png)
+
 ## Task 2. Activate the Virtual Environment
 
 In the same VS Code terminal window, activate the virtual environment.
 
 - On Windows, run: `.venv\Scripts\activate`
-- On Linux/MacOS, run: `source .venv/bin/activate`
+
 
 Verify you see the virtual environment name (.venv) in your terminal prompt.
+
+![.venv terminal verification](image-1.png)
 
 ## Task 3. Install Dependencies into the Virtual Environment
 
@@ -75,11 +75,10 @@ Just fork the current repo, add your change, and create a pull request (no other
 ```shell
 python util_about.py
 python util_aboutenv.py
-python util_aboutrabbit.py
 pip list
 ```
 
-![verifying setup](./images/verifying.png)
+![verifying setup](image-2.png)
 
 
 ## Task 5. Read
@@ -95,6 +94,10 @@ Approach it like a puzzle and see what you can figure out.
 1. Read v1_emit_message.py (and the tutorial)
 1. Run the file. 
 
+```python
+python v1_emit_message.py
+```
+
 It will run, emit a message to the named RabbitMQ queue, and finish.
 We can execute additional commands in the terminal as soon as it finishes. 
 
@@ -103,49 +106,83 @@ We can execute additional commands in the terminal as soon as it finishes.
 1. Read v1_listen_for_messages.py (and the tutorial)
 1. Run the file.
 
-You'll need to fix an error in the program to get it to run.
-Once it runs successfully, will it terminate on its own? How do you know? 
-As long as the process is running, we cannot use this terminal for other commands. 
+```python
+python v1_listen_for_messages.py
+```
+1. Fix the typo error.
+
+![v1 listen error](image-3.png)
+
+1. Save file and rerun.
+
+```python
+python v1_listen_for_messages.py
+```
+1. Terminate the process.
+
+`Control + C`
+ 
 
 ## Task 8. Open a New Terminal / Emit More Messages
 
-1. Open a new terminal window.
-1. Use this new window to run emit_message.py again.
-1. Watch the listing terminal - what do you see?  A second message?
+1. Open a new Anaconda Prompt terminal window and access the local project directory.
 
-Sending the same message each time is kind of boring. This time:
+`cd C:\Users\topaz\Documents\streaming-data\streaming-03-rabbitmq`
 
-1. Where is the message defined? How can you change it?
-1. Modify emit_message.py to emit a different message. 
+1. Activate or verify the Python environment
+
+`conda activate base`
+
+1. Use this new window to run a message.py file.
+
+`python v1_emit_message.py`
+
+1. Watch the listening terminal and observe messages
+
+1. Modify emit_message.py to emit a different message.
+
+![modify message](<Screenshot 2024-05-15 180134.png>)
+
 1. Execute the updated emit_message.py. 
-1. Watch what happens in the listening terminal.
 
-Repeat this process several times - emit at least 4 different messages.
-Don't worry - it's just code. We can always revert back (try the 'undo' command in VS Code) to a version that works. You can't hurt anything.
+```python
+python v1_emit_message.py
+```
+1. Observe and repeat at least 4 times.
 
 ## Task 9. Save Time & Effort: Don't Repeat Yourself
 
-Did you notice you had to change the message in TWO places?
+Refactor emit_send.py to use a variable holding the message, so we only need to make the change in one place when creating a new message.
 
-1. You update the actual message sent. 
-1. You also update what is displayed to the user. 
-1. Fix this by introducing a variable to hold the message. 
-1. Use your variable when sending. 
-1. Use the variable again when displaying to the user. 
+```python
+import pika
 
-Now, to send a new message, you'll only make ONE change.
-Updating and improving code is called 'refactoring'. 
-Use your skills to keep coding enjoyable. 
+# Define the message
+message = "Hello, People!"
+
+# Establish a connection with RabbitMQ server
+connection = pika.BlockingConnection(pika.ConnectionParameters(host="localhost"))
+channel = connection.channel()
+
+# Declare a queue
+channel.queue_declare(queue="hello")
+
+# Publish the message
+channel.basic_publish(exchange="", routing_key="hello", body=message)
+print(f" [x] Sent '{message}'")
+
+# Close the connection
+connection.close()
+```
 
 ## Version 2
 
-Now look at the second version of each file.
-These include more graceful error handling,
-and a consistent, reusable approach to building code.
+1. Find and fix errors in v2 files.
 
-Each of the version 2 programs include an error as well. 
+![v2 emit error](image.png)
 
-1. Find the error and fix it. 
+![v2 listen error](image-1.png)
+
 1. Compare the structure of the version 2 files. 
 1. Modify the docstrings on all your files.
 1. Include your name and the date.

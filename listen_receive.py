@@ -1,6 +1,11 @@
 # See Hello World! Example at
 # https://www.rabbitmq.com/tutorials/tutorial-one-python.html
-import pika, sys, os
+# Name: Topaz Montague
+# Date: 5/15/2025
+
+import pika
+import sys
+import os
 
 
 def main():
