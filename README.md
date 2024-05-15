@@ -36,7 +36,7 @@ python -m venv .venv
 Verify you get a new .venv directory in your project. 
 We use .venv as the name to keep it away from our project files. 
 
-![.venv directory verification](image.png)
+![.venv directory verification](<Screenshot 2024-05-14 194424.png>)
 
 ## Task 2. Activate the Virtual Environment
 
@@ -47,7 +47,7 @@ In the same VS Code terminal window, activate the virtual environment.
 
 Verify you see the virtual environment name (.venv) in your terminal prompt.
 
-![.venv terminal verification](image-1.png)
+![.venv terminal verification](<Screenshot 2024-05-14 194721.png>)
 
 ## Task 3. Install Dependencies into the Virtual Environment
 
@@ -78,7 +78,7 @@ python util_aboutenv.py
 pip list
 ```
 
-![verifying setup](image-2.png)
+![verifying setup](<Screenshot 2024-05-14 195318.png>)
 
 
 ## Task 5. Read
@@ -205,4 +205,3 @@ connection.close()
 - [RabbitMQ Get Started](https://www.rabbitmq.com/#getstarted)
 - [What is RabbitMQ? IBM Intro Video 10 min](https://www.youtube.com/watch?v=7rkeORD4jSw)
 
-![Exploring the local virtual environment folder](./images/exploring_dot_venv.PNG)
