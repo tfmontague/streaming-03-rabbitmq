@@ -1,13 +1,11 @@
-2024-05-14 19:26:13,052.v2_listen_for_messages.INFO ==================================================
-2024-05-14 19:26:13,053.v2_listen_for_messages.INFO Today is 2024-05-14 at 07:26 PM
-2024-05-14 19:26:13,053.v2_listen_for_messages.INFO Running on: nt Windows 11
-2024-05-14 19:26:13,053.v2_listen_for_messages.INFO Python version:  3.12.2
-2024-05-14 19:26:13,053.v2_listen_for_messages.INFO Python path: C:\Users\topaz\Documents\streaming-data\streaming-03-rabbitmq\.venv
-2024-05-14 19:26:13,053.v2_listen_for_messages.INFO Working dir: C:\Users\topaz\Documents\streaming-data\streaming-03-rabbitmq
-2024-05-14 19:26:13,053.v2_listen_for_messages.INFO ==================================================
-2024-05-14 19:26:13,060.v2_listen_for_messages.INFO  [*] Waiting for messages. To exit press CTRL+C
-2024-05-14 19:27:39,229.v2_listen_for_messages.INFO Received: Hello World!
-2024-05-14 19:28:31,610.v2_listen_for_messages.INFO Received: Hello, People!
-2024-05-14 19:29:06,248.v2_listen_for_messages.INFO Received: Hello World!
-2024-05-14 19:29:28,083.v2_listen_for_messages.WARNING User interrupted the listening process.
-2024-05-14 19:29:28,083.v2_listen_for_messages.INFO Closing connection. Goodbye.
+2024-05-15 19:34:18,950.v2_listen_for_messages.INFO ==================================================
+2024-05-15 19:34:18,951.v2_listen_for_messages.INFO Today is 2024-05-15 at 07:34 PM
+2024-05-15 19:34:18,951.v2_listen_for_messages.INFO Running on: nt Windows 11
+2024-05-15 19:34:18,951.v2_listen_for_messages.INFO Python version:  3.12.2
+2024-05-15 19:34:18,951.v2_listen_for_messages.INFO Python path: C:\Users\topaz\Documents\streaming-data\streaming-03-rabbitmq\.venv
+2024-05-15 19:34:18,951.v2_listen_for_messages.INFO Working dir: C:\Users\topaz\Documents\streaming-data\streaming-03-rabbitmq
+2024-05-15 19:34:18,951.v2_listen_for_messages.INFO ==================================================
+2024-05-15 19:34:18,959.v2_listen_for_messages.INFO  [*] Waiting for messages. To exit press CTRL+C
+2024-05-15 19:34:18,959.v2_listen_for_messages.INFO Received: Hello World!
+2024-05-15 19:34:28,971.v2_listen_for_messages.WARNING User interrupted the listening process.
+2024-05-15 19:34:28,971.v2_listen_for_messages.INFO Closing connection. Goodbye.

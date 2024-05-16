@@ -129,11 +129,11 @@ python v1_listen_for_messages.py
 
 `cd C:\Users\topaz\Documents\streaming-data\streaming-03-rabbitmq`
 
-1. Activate or verify the Python environment
+2. Activate or verify the Python environment
 
 `conda activate base`
 
-1. Use this new window to run a message.py file.
+3. Use this new window to run a message.py file.
 
 `python v1_emit_message.py`
 
@@ -149,6 +149,8 @@ python v1_listen_for_messages.py
 python v1_emit_message.py
 ```
 1. Observe and repeat at least 4 times.
+
+![alt text](image-2.png)
 
 ## Task 9. Save Time & Effort: Don't Repeat Yourself
 
